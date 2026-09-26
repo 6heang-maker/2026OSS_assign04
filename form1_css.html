@@ -2,20 +2,149 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Form Practice</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Form CSS Practice</title>
+
+
+    <style>
+
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+
+
+        .form-box {
+            width: 600px;
+            max-width: 90%;
+
+            margin: 30px auto;
+
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+        }
+
+
+        fieldset {
+            margin-bottom: 20px;
+
+            padding: 20px;
+
+            border: 1px solid #cccccc;
+
+            border-radius: 8px;
+        }
+
+
+        legend {
+            font-weight: bold;
+        }
+
+
+        label {
+            display: inline-block;
+
+            margin-bottom: 5px;
+        }
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-top: 5px;
+
+            border: 1px solid #cccccc;
+
+            border-radius: 5px;
+
+            box-sizing: border-box;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: #007bff;
+
+            outline: none;
+
+            background-color: #f0f7ff;
+        }
+
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        button {
+            padding: 10px 20px;
+
+            margin-right: 5px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background-color: #007bff;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+        .home {
+            display: block;
+
+            margin-top: 20px;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+<div class="form-box">
+
+
     <h1>Order Form</h1>
 
-    <p>주문 정보 입력.</p>
+    <p>주문 정보를 입력해주세요.</p>
 
 
-    <form action="#" method="get">
+    <form action="#"
+          method="get">
+
 
         <fieldset>
 
@@ -23,79 +152,115 @@
 
 
             <p>
-                <label for="name">이름</label><br>
+
+                <label for="name">
+                    이름
+                </label>
 
                 <input type="text"
                        id="name"
                        name="name"
                        placeholder="이름 입력"
                        required>
+
             </p>
 
 
             <p>
-                <label for="email">이메일</label><br>
+
+                <label for="email">
+                    이메일
+                </label>
 
                 <input type="email"
                        id="email"
                        name="email"
-                       placeholder="123457@gmail.com"
+                       placeholder="example@gmail.com"
                        required>
+
             </p>
 
 
             <p>
-                <label for="phone">전화번호</label><br>
+
+                <label for="phone">
+                    전화번호
+                </label>
 
                 <input type="text"
                        id="phone"
                        name="phone"
                        placeholder="010-0000-0000"
                        required>
+
             </p>
 
 
             <p>
-                <label for="address">주소</label><br>
+
+                <label for="address">
+                    주소
+                </label>
 
                 <input type="text"
                        id="address"
                        name="address"
                        placeholder="주소 입력"
                        required>
+
             </p>
 
 
             <p>
-                <label for="city">지역</label><br>
+
+                <label for="city">
+                    지역
+                </label>
 
                 <select id="city"
                         name="city"
                         required>
 
-                    <option value="">지역 선택</option>
-                    <option value="seoul">서울</option>
-                    <option value="busan">부산</option>
-                    <option value="pohang">포항</option>
-                    <option value="daegu">대구</option>
+                    <option value="">
+                        지역 선택
+                    </option>
+
+                    <option value="seoul">
+                        서울
+                    </option>
+
+                    <option value="busan">
+                        부산
+                    </option>
+
+                    <option value="pohang">
+                        포항
+                    </option>
+
+                    <option value="daegu">
+                        대구
+                    </option>
 
                 </select>
+
             </p>
 
 
             <p>
-                <label for="date">배송 날짜</label><br>
+
+                <label for="date">
+                    배송 날짜
+                </label>
 
                 <input type="date"
                        id="date"
                        name="date"
                        required>
+
             </p>
 
         </fieldset>
 
-
-        <br>
 
 
         <fieldset>
@@ -107,13 +272,16 @@
                 결제 방법
             </p>
 
+
             <input type="radio"
                    id="card"
                    name="payment"
                    value="card"
                    required>
 
-            <label for="card">카드</label>
+            <label for="card">
+                카드
+            </label>
 
 
             <input type="radio"
@@ -121,19 +289,25 @@
                    name="payment"
                    value="bank">
 
-            <label for="bank">계좌이체</label>
+            <label for="bank">
+                계좌이체
+            </label>
+
 
 
             <p>
                 추가 옵션
             </p>
 
+
             <input type="checkbox"
                    id="gift"
                    name="option"
                    value="gift">
 
-            <label for="gift">선물 포장</label>
+            <label for="gift">
+                선물 포장
+            </label>
 
 
             <input type="checkbox"
@@ -141,24 +315,40 @@
                    name="option"
                    value="fast">
 
-            <label for="fast">빠른 배송</label>
+            <label for="fast">
+                빠른 배송
+            </label>
+
 
 
             <p>
-                <label for="color">원하는 색상</label><br>
+
+                <label for="color">
+                    원하는 색상
+                </label>
+
+                <br>
 
                 <input type="color"
                        id="color"
                        name="color">
+
             </p>
 
 
+
             <p>
-                <label for="time">연락 가능한 시간</label><br>
+
+                <label for="time">
+                    연락 가능한 시간
+                </label>
+
+                <br>
 
                 <input list="timeList"
                        id="time"
                        name="time">
+
 
                 <datalist id="timeList">
 
@@ -167,42 +357,57 @@
                     <option value="저녁">
 
                 </datalist>
+
             </p>
 
 
+
             <p>
-                <label for="coupon">쿠폰 코드</label><br>
+
+                <label for="coupon">
+                    쿠폰 코드
+                </label>
 
                 <input type="text"
                        id="coupon"
                        name="coupon"
                        placeholder="쿠폰 코드">
+
             </p>
 
 
+
             <p>
-                <label for="memo">요청사항</label><br>
+
+                <label for="memo">
+                    요청사항
+                </label>
 
                 <textarea id="memo"
                           name="memo"
                           rows="5"
-                          cols="40"
                           placeholder="요청사항을 입력해주세요"></textarea>
+
             </p>
+
 
         </fieldset>
 
 
-        <br>
-
 
         <button type="submit">
+
             주문하기
+
         </button>
 
+
         <button type="reset">
+
             다시 작성
+
         </button>
+
 
     </form>
 
@@ -219,11 +424,16 @@
     </p>
 
 
-    <p>
-        <a href="index.html">Home</a>
-    </p>
+    <a class="home"
+       href="index.html">
 
-    
+        Home
+
+    </a>
+
+
+</div>
+
 
 </body>
 
